@@ -1,0 +1,130 @@
+Inferring Columns ...
+Creating Data loader ...
+Loading data ...
+Exploring multiple ML algorithms and settings to find you the best model for ML task: multiclass-classification
+For further learning check: https://aka.ms/mlnet-cli
+|     Trainer                              MicroAccuracy  MacroAccuracy  Duration #Iteration                     |
+[Source=AutoML, Kind=Trace] Channel started
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=ValueToKeyMapping{ col=fare_amount:fare_amount} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,rate_code,passenger_count,trip_time_in_secs,trip_distance} xf=Normalizing{ col=Features:Features} tr=AveragedPerceptronOva{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+Time expired before creating a model. Try increasing the exploration time from 10 seconds to a longer duration using the --max-exploration-time option. Learn about recommended training time at https://aka.ms/cli-trainingtime
+Exiting ...
+Inferring Columns ...
+Creating Data loader ...
+Loading data ...
+Exploring multiple ML algorithms and settings to find you the best model for ML task: multiclass-classification
+For further learning check: https://aka.ms/mlnet-cli
+|     Trainer                              MicroAccuracy  MacroAccuracy  Duration #Iteration                     |
+[Source=AutoML, Kind=Trace] Channel started
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=ValueToKeyMapping{ col=fare_amount:fare_amount} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,rate_code,passenger_count,trip_time_in_secs,trip_distance} xf=Normalizing{ col=Features:Features} tr=AveragedPerceptronOva{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+Time expired before creating a model. Try increasing the exploration time from 100 seconds to a longer duration using the --max-exploration-time option. Learn about recommended training time at https://aka.ms/cli-trainingtime
+Exiting ...
+Inferring Columns ...
+Creating Data loader ...
+Loading data ...
+Exploring multiple ML algorithms and settings to find you the best model for ML task: multiclass-classification
+For further learning check: https://aka.ms/mlnet-cli
+|     Trainer                              MicroAccuracy  MacroAccuracy  Duration #Iteration                     |
+[Source=AutoML, Kind=Trace] Channel started
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} xf=Normalizing{ col=Features:Features} tr=AveragedPerceptronOva{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+[Source=AutoML, Kind=Trace] 1	0.992588141025641	00:00:06.8628430	xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} xf=Normalizing{ col=Features:Features} tr=AveragedPerceptronOva{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+|1    AveragedPerceptronOva                       0.9926         0.5019       6.9          0                     |
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} xf=Normalizing{ col=Features:Features} tr=SdcaMaximumEntropyMulti{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+[Source=AutoML, Kind=Trace] 2	0.991386217948718	00:00:01.5664354	xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} xf=Normalizing{ col=Features:Features} tr=SdcaMaximumEntropyMulti{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+|2    SdcaMaximumEntropyMulti                     0.9914         0.4109       1.6          0                     |
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} tr=LightGbmMulti{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=-
+[Source=AutoML, Kind=Error] Pipeline crashed: xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} tr=LightGbmMulti{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=- . Exception: System.DllNotFoundException: Unable to load shared library 'lib_lightgbm' or one of its dependencies. In order to help diagnose loading problems, consider setting the DYLD_PRINT_LIBRARIES environment variable: dlopen(liblib_lightgbm, 1): image not found
+   at Microsoft.ML.Trainers.LightGbm.WrappedLightGbmInterface.DatasetCreateFromSampledColumn(IntPtr sampleValuePerColumn, IntPtr sampleIndicesPerColumn, Int32 numCol, Int32[] sampleNonZeroCntPerColumn, Int32 numSampleRow, Int32 numTotalRow, String parameters, IntPtr& ret)
+   at Microsoft.ML.Trainers.LightGbm.Dataset..ctor(Double[][] sampleValuePerColumn, Int32[][] sampleIndicesPerColumn, Int32 numCol, Int32[] sampleNonZeroCntPerColumn, Int32 numSampleRow, Int32 numTotalRow, String param, Single[] labels, Single[] weights, Int32[] groups)
+   at Microsoft.ML.Trainers.LightGbm.LightGbmTrainerBase`4.CreateDatasetFromSamplingData(IChannel ch, Factory factory, Int32 numRow, String param, Single[] labels, Single[] weights, Int32[] groups, CategoricalMetaData catMetaData, Dataset& dataset)
+   at Microsoft.ML.Trainers.LightGbm.LightGbmTrainerBase`4.LoadTrainingData(IChannel ch, RoleMappedData trainData, CategoricalMetaData& catMetaData)
+   at Microsoft.ML.Trainers.LightGbm.LightGbmTrainerBase`4.TrainModelCore(TrainContext context)
+   at Microsoft.ML.Trainers.TrainerEstimatorBase`2.TrainTransformer(IDataView trainSet, IDataView validationSet, IPredictor initPredictor)
+   at Microsoft.ML.Data.EstimatorChain`1.Fit(IDataView input)
+   at Microsoft.ML.Data.EstimatorChain`1.Fit(IDataView input)
+   at Microsoft.ML.AutoML.RunnerUtil.TrainAndScorePipeline[TMetrics](MLContext context, SuggestedPipeline pipeline, IDataView trainData, IDataView validData, String labelColumn, IMetricsAgent`1 metricsAgent, ITransformer preprocessorTransform, FileInfo modelFileInfo, DataViewSchema modelInputSchema, AutoMLLogger logger)
+[Source=AutoML, Kind=Trace] 3	NaN	00:00:00.6163993	xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} tr=LightGbmMulti{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=-
+|3    LightGbmMulti                                  NaN            NaN       0.6          0                     |
+System.DllNotFoundException: Unable to load shared library 'lib_lightgbm' or one of its dependencies. In order to help diagnose loading problems, consider setting the DYLD_PRINT_LIBRARIES environment variable: dlopen(liblib_lightgbm, 1): image not found
+   at Microsoft.ML.Trainers.LightGbm.WrappedLightGbmInterface.DatasetCreateFromSampledColumn(IntPtr sampleValuePerColumn, IntPtr sampleIndicesPerColumn, Int32 numCol, Int32[] sampleNonZeroCntPerColumn, Int32 numSampleRow, Int32 numTotalRow, String parameters, IntPtr& ret)
+   at Microsoft.ML.Trainers.LightGbm.Dataset..ctor(Double[][] sampleValuePerColumn, Int32[][] sampleIndicesPerColumn, Int32 numCol, Int32[] sampleNonZeroCntPerColumn, Int32 numSampleRow, Int32 numTotalRow, String param, Single[] labels, Single[] weights, Int32[] groups)
+   at Microsoft.ML.Trainers.LightGbm.LightGbmTrainerBase`4.CreateDatasetFromSamplingData(IChannel ch, Factory factory, Int32 numRow, String param, Single[] labels, Single[] weights, Int32[] groups, CategoricalMetaData catMetaData, Dataset& dataset)
+   at Microsoft.ML.Trainers.LightGbm.LightGbmTrainerBase`4.LoadTrainingData(IChannel ch, RoleMappedData trainData, CategoricalMetaData& catMetaData)
+   at Microsoft.ML.Trainers.LightGbm.LightGbmTrainerBase`4.TrainModelCore(TrainContext context)
+   at Microsoft.ML.Trainers.TrainerEstimatorBase`2.TrainTransformer(IDataView trainSet, IDataView validationSet, IPredictor initPredictor)
+   at Microsoft.ML.Data.EstimatorChain`1.Fit(IDataView input)
+   at Microsoft.ML.Data.EstimatorChain`1.Fit(IDataView input)
+   at Microsoft.ML.AutoML.RunnerUtil.TrainAndScorePipeline[TMetrics](MLContext context, SuggestedPipeline pipeline, IDataView trainData, IDataView validData, String labelColumn, IMetricsAgent`1 metricsAgent, ITransformer preprocessorTransform, FileInfo modelFileInfo, DataViewSchema modelInputSchema, AutoMLLogger logger)
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} xf=Normalizing{ col=Features:Features} tr=SymbolicSgdLogisticRegressionOva{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+[Source=AutoML, Kind=Error] Pipeline crashed: xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} xf=Normalizing{ col=Features:Features} tr=SymbolicSgdLogisticRegressionOva{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+ . Exception: System.TypeInitializationException: The type initializer for 'Native' threw an exception. ---> System.DllNotFoundException: Unable to load shared library 'MklImports' or one of its dependencies. In order to help diagnose loading problems, consider setting the DYLD_PRINT_LIBRARIES environment variable: dlopen(libMklImports, 1): image not found
+   at Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer.Native.ErrorMessage(Int32 status)
+   at Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer.Native..cctor()
+   --- End of inner exception stack trace ---
+   at Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer.Native.LearnAll(InputDataManager inputDataManager, Boolean tuneLR, Single& lr, Single l2Const, Single piw, Span`1 weightVector, Single& bias, Int32 numFeatres, Int32 numPasses, Int32 numThreads, Boolean tuneNumLocIter, Int32& numLocIter, Single tolerance, Boolean needShuffle, Boolean shouldInitialize, GCHandle stateGCHandle, ChannelCallBack info)
+   at Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer.TrainCore(IChannel ch, RoleMappedData data, LinearModelParameters predictor, Int32 weightSetCount)
+   at Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer.TrainModelCore(TrainContext context)
+   at Microsoft.ML.Trainers.TrainerEstimatorBase`2.TrainTransformer(IDataView trainSet, IDataView validationSet, IPredictor initPredictor)
+   at Microsoft.ML.Trainers.OneVersusAllTrainer.TrainOne(IChannel ch, ITrainerEstimator`2 trainer, RoleMappedData data, Int32 cls)
+   at Microsoft.ML.Trainers.OneVersusAllTrainer.Fit(IDataView input)
+   at Microsoft.ML.Data.EstimatorChain`1.Fit(IDataView input)
+   at Microsoft.ML.Data.EstimatorChain`1.Fit(IDataView input)
+   at Microsoft.ML.AutoML.RunnerUtil.TrainAndScorePipeline[TMetrics](MLContext context, SuggestedPipeline pipeline, IDataView trainData, IDataView validData, String labelColumn, IMetricsAgent`1 metricsAgent, ITransformer preprocessorTransform, FileInfo modelFileInfo, DataViewSchema modelInputSchema, AutoMLLogger logger)
+[Source=AutoML, Kind=Trace] 4	NaN	00:00:00.4817775	xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} xf=Normalizing{ col=Features:Features} tr=SymbolicSgdLogisticRegressionOva{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+|4    SymbolicSgdLogisticRegressionOva               NaN            NaN       0.5          0                     |
+System.TypeInitializationException: The type initializer for 'Native' threw an exception. ---> System.DllNotFoundException: Unable to load shared library 'MklImports' or one of its dependencies. In order to help diagnose loading problems, consider setting the DYLD_PRINT_LIBRARIES environment variable: dlopen(libMklImports, 1): image not found
+   at Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer.Native.ErrorMessage(Int32 status)
+   at Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer.Native..cctor()
+   --- End of inner exception stack trace ---
+   at Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer.Native.LearnAll(InputDataManager inputDataManager, Boolean tuneLR, Single& lr, Single l2Const, Single piw, Span`1 weightVector, Single& bias, Int32 numFeatres, Int32 numPasses, Int32 numThreads, Boolean tuneNumLocIter, Int32& numLocIter, Single tolerance, Boolean needShuffle, Boolean shouldInitialize, GCHandle stateGCHandle, ChannelCallBack info)
+   at Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer.TrainCore(IChannel ch, RoleMappedData data, LinearModelParameters predictor, Int32 weightSetCount)
+   at Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer.TrainModelCore(TrainContext context)
+   at Microsoft.ML.Trainers.TrainerEstimatorBase`2.TrainTransformer(IDataView trainSet, IDataView validationSet, IPredictor initPredictor)
+   at Microsoft.ML.Trainers.OneVersusAllTrainer.TrainOne(IChannel ch, ITrainerEstimator`2 trainer, RoleMappedData data, Int32 cls)
+   at Microsoft.ML.Trainers.OneVersusAllTrainer.Fit(IDataView input)
+   at Microsoft.ML.Data.EstimatorChain`1.Fit(IDataView input)
+   at Microsoft.ML.Data.EstimatorChain`1.Fit(IDataView input)
+   at Microsoft.ML.AutoML.RunnerUtil.TrainAndScorePipeline[TMetrics](MLContext context, SuggestedPipeline pipeline, IDataView trainData, IDataView validData, String labelColumn, IMetricsAgent`1 metricsAgent, ITransformer preprocessorTransform, FileInfo modelFileInfo, DataViewSchema modelInputSchema, AutoMLLogger logger)
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} tr=FastTreeOva{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+[Source=AutoML, Kind=Trace] 5	0.997195512820513	00:00:09.2737815	xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} tr=FastTreeOva{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+|5    FastTreeOva                                 0.9972         0.7673       9.3          0                     |
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} xf=Normalizing{ col=Features:Features} tr=LinearSvmOva{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+[Source=AutoML, Kind=Trace] 6	0.987980769230769	00:00:02.4162565	xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} xf=Normalizing{ col=Features:Features} tr=LinearSvmOva{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+|6    LinearSvmOva                                0.9880         0.4305       2.4          0                     |
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} xf=Normalizing{ col=Features:Features} tr=LbfgsLogisticRegressionOva{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+[Source=AutoML, Kind=Trace] 7	0.991286057692308	00:00:07.8941357	xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} xf=Normalizing{ col=Features:Features} tr=LbfgsLogisticRegressionOva{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+|7    LbfgsLogisticRegressionOva                  0.9913         0.4084       7.9          0                     |
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} xf=Normalizing{ col=Features:Features} tr=SgdCalibratedOva{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+[Source=AutoML, Kind=Trace] 8	0.987279647435897	00:00:07.5843240	xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} xf=Normalizing{ col=Features:Features} tr=SgdCalibratedOva{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+|8    SgdCalibratedOva                            0.9873         0.3327       7.6          0                     |
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} tr=FastForestOva{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+[Source=AutoML, Kind=Trace] 9	0.997896634615385	00:00:14.9831039	xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} tr=FastForestOva{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+|9    FastForestOva                               0.9979         0.7522      15.0          0                     |
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} xf=Normalizing{ col=Features:Features} tr=LbfgsMaximumEntropyMulti{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+[Source=AutoML, Kind=Trace] 10	0.991887019230769	00:00:08.3378282	xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} xf=Normalizing{ col=Features:Features} tr=LbfgsMaximumEntropyMulti{} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+|10   LbfgsMaximumEntropyMulti                    0.9919         0.4668       8.3          0                     |
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} xf=Normalizing{ col=Features:Features} tr=AveragedPerceptronOva{LearningRate:0.1, DecreaseLearningRate:False, L2Regularization:0.344637, NumberOfIterations:26, InitialWeightsDiameter:0.7409934, Shuffle:False} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+[Source=AutoML, Kind=Trace] 11	0.980168269230769	00:00:11.4110548	xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} xf=Normalizing{ col=Features:Features} tr=AveragedPerceptronOva{LearningRate:0.1, DecreaseLearningRate:False, L2Regularization:0.344637, NumberOfIterations:26, InitialWeightsDiameter:0.7409934, Shuffle:False} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+|11   AveragedPerceptronOva                       0.9802         0.2000      11.4          0                     |
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=ValueToKeyMapping{ col=rate_code:rate_code} xf=OneHotEncoding{ col=vendor_id:vendor_id col=payment_type:payment_type} xf=ColumnConcatenating{ col=Features:vendor_id,payment_type,passenger_count,trip_time_in_secs,trip_distance,fare_amount} tr=FastTreeOva{NumberOfLeaves:109, MinimumExampleCountPerLeaf:50, NumberOfTrees:500, LearningRate:0.1147765, Shrinkage:0.05099412} xf=KeyToValueMapping{ col=PredictedLabel:PredictedLabel} cache=+
+
+===============================================Experiment Results=================================================
+------------------------------------------------------------------------------------------------------------------
+|                                                     Summary                                                    |
+------------------------------------------------------------------------------------------------------------------
+|ML Task: multiclass-classification                                                                              |
+|Dataset: taxi-fare-train.csv                                                                                    |
+|Label : rate_code                                                                                               |
+|Total experiment time : 101.01 Secs                                                                             |
+|Total number of models explored: 11                                                                             |
+------------------------------------------------------------------------------------------------------------------
+|                                              Top 5 models explored                                             |
+------------------------------------------------------------------------------------------------------------------
+|     Trainer                              MicroAccuracy  MacroAccuracy  Duration #Iteration                     |
+|1    FastForestOva                               0.9979         0.7522      15.0          7                     |
+|2    FastTreeOva                                 0.9972         0.7673       9.3          3                     |
+|3    AveragedPerceptronOva                       0.9926         0.5019       6.9          1                     |
+|4    LbfgsMaximumEntropyMulti                    0.9919         0.4668       8.3          8                     |
+|5    SdcaMaximumEntropyMulti                     0.9914         0.4109       1.6          2                     |
+------------------------------------------------------------------------------------------------------------------
+Generated trained model for consumption: /Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/SampleMulticlassClassification/SampleMulticlassClassification.Model/MLModel.zip
+Generated C# code for model consumption: /Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/SampleMulticlassClassification/SampleMulticlassClassification.ConsoleApp
+Check out log file for more information: /Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/SampleMulticlassClassification/logs/debug_log.txt

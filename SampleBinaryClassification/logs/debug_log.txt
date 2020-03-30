@@ -1,0 +1,41 @@
+Inferring Columns ...
+An Error occured during inferring columns
+Specified label column 'Sentiment' was not found.
+System.ArgumentException: Specified label column 'Sentiment' was not found.
+   at Microsoft.ML.AutoML.ColumnTypeInference.GetAndValidateLabelColumn(Arguments args, IntermediateColumn[] cols)
+   at Microsoft.ML.AutoML.ColumnTypeInference.InferTextFileColumnTypesCore(MLContext context, IMultiStreamSource fileSource, Arguments args)
+   at Microsoft.ML.AutoML.ColumnInferenceApi.InferColumnTypes(MLContext context, TextFileSample sample, ColumnSplitResult splitInference, Boolean hasHeader, Nullable`1 labelColumnIndex, String label)
+   at Microsoft.ML.AutoML.ColumnInferenceApi.InferColumns(MLContext context, String path, ColumnInformation columnInfo, Nullable`1 separatorChar, Nullable`1 allowQuotedStrings, Nullable`1 supportSparse, Boolean trimWhitespace, Boolean groupColumns)
+   at Microsoft.ML.CLI.CodeGenerator.AutoMLEngine.InferColumns(MLContext context, ColumnInformation columnInformation)
+   at Microsoft.ML.CLI.CodeGenerator.CodeGenerationHelper.GenerateCode()
+   at Microsoft.ML.CLI.Program.<>c__DisplayClass1_0.<Main>b__0(NewCommandSettings options)
+Please see the log file for more info.
+Exiting ...
+Inferring Columns ...
+Creating Data loader ...
+Loading data ...
+Exploring multiple ML algorithms and settings to find you the best model for ML task: binary-classification
+For further learning check: https://aka.ms/mlnet-cli
+|     Trainer                              Accuracy      AUC    AUPRC  F1-score  Duration #Iteration             |
+[Source=AutoML, Kind=Trace] Channel started
+Exception occured while exploring pipelines:
+Provided label column 'fare_amount' was of type Single, but only type Boolean is allowed.
+System.ArgumentException: Provided label column 'fare_amount' was of type Single, but only type Boolean is allowed.
+   at Microsoft.ML.CLI.CodeGenerator.CodeGenerationHelper.GenerateCode()
+   at Microsoft.ML.CLI.Program.<>c__DisplayClass1_0.<Main>b__0(NewCommandSettings options)
+Please see the log file for more info.
+Exiting ...
+Inferring Columns ...
+Creating Data loader ...
+Loading data ...
+Exploring multiple ML algorithms and settings to find you the best model for ML task: binary-classification
+For further learning check: https://aka.ms/mlnet-cli
+|     Trainer                              Accuracy      AUC    AUPRC  F1-score  Duration #Iteration             |
+[Source=AutoML, Kind=Trace] Channel started
+Exception occured while exploring pipelines:
+Provided label column 'rate_code' was of type Single, but only type Boolean is allowed.
+System.ArgumentException: Provided label column 'rate_code' was of type Single, but only type Boolean is allowed.
+   at Microsoft.ML.CLI.CodeGenerator.CodeGenerationHelper.GenerateCode()
+   at Microsoft.ML.CLI.Program.<>c__DisplayClass1_0.<Main>b__0(NewCommandSettings options)
+Please see the log file for more info.
+Exiting ...
