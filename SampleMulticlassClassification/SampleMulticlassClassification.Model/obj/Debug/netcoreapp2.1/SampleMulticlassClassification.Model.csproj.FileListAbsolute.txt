@@ -1,0 +1,10 @@
+/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/SampleMulticlassClassification/SampleMulticlassClassification.Model/bin/Debug/netcoreapp2.1/MLModel.zip
+/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/SampleMulticlassClassification/SampleMulticlassClassification.Model/bin/Debug/netcoreapp2.1/SampleMulticlassClassification.Model.deps.json
+/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/SampleMulticlassClassification/SampleMulticlassClassification.Model/bin/Debug/netcoreapp2.1/SampleMulticlassClassification.Model.dll
+/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/SampleMulticlassClassification/SampleMulticlassClassification.Model/bin/Debug/netcoreapp2.1/SampleMulticlassClassification.Model.pdb
+/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/SampleMulticlassClassification/SampleMulticlassClassification.Model/obj/Debug/netcoreapp2.1/SampleMulticlassClassification.Model.csprojAssemblyReference.cache
+/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/SampleMulticlassClassification/SampleMulticlassClassification.Model/obj/Debug/netcoreapp2.1/SampleMulticlassClassification.Model.csproj.CoreCompileInputs.cache
+/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/SampleMulticlassClassification/SampleMulticlassClassification.Model/obj/Debug/netcoreapp2.1/SampleMulticlassClassification.Model.AssemblyInfoInputs.cache
+/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/SampleMulticlassClassification/SampleMulticlassClassification.Model/obj/Debug/netcoreapp2.1/SampleMulticlassClassification.Model.AssemblyInfo.cs
+/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/SampleMulticlassClassification/SampleMulticlassClassification.Model/obj/Debug/netcoreapp2.1/SampleMulticlassClassification.Model.dll
+/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/SampleMulticlassClassification/SampleMulticlassClassification.Model/obj/Debug/netcoreapp2.1/SampleMulticlassClassification.Model.pdb

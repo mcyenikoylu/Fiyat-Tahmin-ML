@@ -1,72 +1,9 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/consumeModelApp/consumeModelApp.csproj": {}
+    "/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/SampleMulticlassClassification/SampleMulticlassClassification.Model/SampleMulticlassClassification.Model.csproj": {}
   },
   "projects": {
-    "/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/consumeModelApp/consumeModelApp.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/consumeModelApp/consumeModelApp.csproj",
-        "projectName": "consumeModelApp",
-        "projectPath": "/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/consumeModelApp/consumeModelApp.csproj",
-        "packagesPath": "/Users/mcyenikoylu/.nuget/packages/",
-        "outputPath": "/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/consumeModelApp/obj/",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "/Users/mcyenikoylu/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "projectReferences": {
-              "/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/SampleMulticlassClassification/SampleMulticlassClassification.Model/SampleMulticlassClassification.Model.csproj": {
-                "projectPath": "/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/SampleMulticlassClassification/SampleMulticlassClassification.Model/SampleMulticlassClassification.Model.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "dependencies": {
-            "Microsoft.ML": {
-              "target": "Package",
-              "version": "[1.4.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.201/RuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "/Users/mcyenikoylu/Documents/Projects/Fiyat-Tahmin-ML/SampleMulticlassClassification/SampleMulticlassClassification.Model/SampleMulticlassClassification.Model.csproj": {
       "version": "1.0.0",
       "restore": {
